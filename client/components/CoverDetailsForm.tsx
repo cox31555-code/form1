@@ -37,32 +37,36 @@ export default function CoverDetailsForm() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-2xl mx-auto">
-        <div className="bg-white rounded-lg shadow-sm p-8">
+        <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
           {/* Header */}
-          <div className="flex items-center gap-4 mb-10">
-            <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-              <Check className="w-6 h-6 text-blue-600" strokeWidth={3} />
+          <div className="flex items-center gap-4 mb-12">
+            <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center shadow-md">
+              <Check className="w-7 h-7 text-white" strokeWidth={3} />
             </div>
-            <h1 className="text-4xl font-semibold text-gray-900">
-              Cover Details
-            </h1>
+            <div>
+              <h1 className="text-4xl font-bold text-gray-900 tracking-tight">
+                Cover Details
+              </h1>
+              <p className="text-sm text-gray-500 mt-1">Step 2 of your application</p>
+            </div>
           </div>
 
           {/* Duration Section */}
-          <div className="mb-10">
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">
-              How Long Will You Need It?
-            </h2>
-
+          <div className="mb-12">
             <div className="mb-6">
-              <p className="text-sm font-medium text-gray-700 mb-4">
-                Please Select
+              <h2 className="text-xl font-bold text-gray-900 mb-2">
+                How Long Will You Need It?
+              </h2>
+              <p className="text-sm text-gray-500">
+                Select your preferred coverage duration
               </p>
+            </div>
 
+            <div className="space-y-6">
               {/* Duration Type Selection */}
-              <div className="grid grid-cols-3 gap-3 mb-6">
+              <div className="grid grid-cols-3 gap-3">
                 {(
                   [
                     { key: "hours", label: "Hours" },
@@ -73,10 +77,10 @@ export default function CoverDetailsForm() {
                   <button
                     key={key}
                     onClick={() => setDurationType(key)}
-                    className={`py-3 px-4 rounded-lg font-medium transition-all flex items-center justify-center gap-2 ${
+                    className={`py-3 px-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center gap-2 ${
                       durationType === key
-                        ? "bg-blue-600 text-white ring-2 ring-blue-600 ring-offset-2"
-                        : "border border-gray-200 text-gray-700 hover:border-gray-300"
+                        ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg shadow-blue-200 scale-105"
+                        : "border border-gray-200 text-gray-700 hover:border-blue-300 hover:bg-blue-50 active:scale-95"
                     }`}
                   >
                     <div
@@ -146,89 +150,64 @@ export default function CoverDetailsForm() {
           </div>
 
           {/* Start Date/Time Section */}
-          <div className="mb-10">
-            <h2 className="text-lg font-semibold text-gray-900 mb-6">
-              When Would You Like The Cover To Start?
-            </h2>
+          <div className="mb-12">
+            <div className="mb-6">
+              <h2 className="text-xl font-bold text-gray-900 mb-2">
+                When Would You Like The Cover To Start?
+              </h2>
+              <p className="text-sm text-gray-500">
+                Choose your coverage start date and time
+              </p>
+            </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {/* Start Date */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-semibold text-gray-700 mb-3">
                   Start Date
                 </label>
-                <div className="relative">
-                  <Calendar className="absolute left-3 top-3 w-5 h-5 text-gray-400 pointer-events-none" />
+                <div className="relative group">
+                  <Calendar className="absolute left-4 top-3.5 w-5 h-5 text-gray-400 pointer-events-none group-focus-within:text-blue-600 transition-colors" />
                   <input
                     type="text"
                     placeholder="DD/MM/YYYY"
                     value={startDate}
                     onChange={(e) => setStartDate(e.target.value)}
-                    className="w-full pl-10 pr-10 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-gray-700 placeholder:text-gray-400"
+                    className="w-full pl-11 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-700 placeholder:text-gray-400 transition-all duration-200 hover:border-gray-300"
                   />
-                  <button className="absolute right-3 top-3 text-gray-400 hover:text-gray-600">
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 14l-7 7m0 0l-7-7m7 7V3"
-                      />
-                    </svg>
-                  </button>
                 </div>
               </div>
 
               {/* Start Time */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-semibold text-gray-700 mb-3">
                   Start Time
                 </label>
-                <div className="relative">
-                  <Clock className="absolute left-3 top-3 w-5 h-5 text-gray-400 pointer-events-none" />
+                <div className="relative group">
+                  <Clock className="absolute left-4 top-3.5 w-5 h-5 text-gray-400 pointer-events-none group-focus-within:text-blue-600 transition-colors" />
                   <input
                     type="text"
                     placeholder="10:00"
                     value={startTime}
                     onChange={(e) => setStartTime(e.target.value)}
-                    className="w-full pl-10 pr-10 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-gray-700 placeholder:text-gray-400"
+                    className="w-full pl-11 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-700 placeholder:text-gray-400 transition-all duration-200 hover:border-gray-300"
                   />
-                  <button className="absolute right-3 top-3 text-gray-400 hover:text-gray-600">
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 14l-7 7m0 0l-7-7m7 7V3"
-                      />
-                    </svg>
-                  </button>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Action Buttons */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-12 pt-6 border-t border-gray-100">
             <button
               onClick={handleBack}
-              className="px-6 py-3 border border-blue-600 text-blue-600 rounded-lg font-medium hover:bg-blue-50 transition-colors flex items-center justify-center gap-2"
+              className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 flex items-center justify-center gap-2 active:scale-95"
             >
               <span>←</span> Back
             </button>
             <button
               onClick={handleNext}
-              className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
+              className="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-300 transition-all duration-200 flex items-center justify-center gap-2 active:scale-95"
             >
               Next <span>→</span>
             </button>
