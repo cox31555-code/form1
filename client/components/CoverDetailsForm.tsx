@@ -130,7 +130,7 @@ export default function CoverDetailsForm() {
                 <p className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-3">
                   Select Duration
                 </p>
-                <div className="flex gap-0.75">
+                <div className="flex gap-[3px]">
                   {durationOptions.map((option) => {
                     const buttonWidth =
                       durationOptions.length === 12
