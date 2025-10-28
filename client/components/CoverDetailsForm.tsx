@@ -130,7 +130,7 @@ export default function CoverDetailsForm() {
                 <p className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-3">
                   Select Duration
                 </p>
-                <div className={`grid gap-2 ${gridColsClass}`}>
+                <div className="flex flex-wrap gap-2">
                   {durationOptions.map((option) => (
                     <button
                       key={option}
