@@ -105,14 +105,14 @@ export default function CoverDetailsForm() {
                 <p className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-3">
                   Select Duration
                 </p>
-                <div className="flex items-center gap-2 flex-wrap">
+                <div className="grid grid-cols-4 gap-2">
                   {durationOptions.map((option) => (
                     <button
                       key={option}
                       onClick={() => handleDurationChange(option)}
-                      className={`flex-shrink-0 w-10 h-10 rounded-lg font-bold transition-all duration-200 text-sm ${
+                      className={`w-full py-2 rounded-lg font-bold transition-all duration-200 text-sm ${
                         duration === option
-                          ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg shadow-blue-200 scale-110"
+                          ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg shadow-blue-200 scale-105"
                           : "border border-gray-200 text-gray-700 hover:border-blue-400 hover:bg-white active:scale-95"
                       }`}
                     >
@@ -124,7 +124,7 @@ export default function CoverDetailsForm() {
                   <div className="relative">
                     <button
                       onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                      className="w-10 h-10 border border-gray-200 rounded-lg flex items-center justify-center hover:border-blue-400 hover:bg-white transition-all duration-200 text-gray-600 hover:text-gray-900"
+                      className="w-full py-2 border border-gray-200 rounded-lg flex items-center justify-center hover:border-blue-400 hover:bg-white transition-all duration-200 text-gray-600 hover:text-gray-900"
                     >
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`} />
                     </button>
