@@ -10,14 +10,54 @@ export default function CoverDetailsForm() {
   const [startTime, setStartTime] = useState("10:00");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const durationOptions = [1, 2, 3, 4, 5, 6, 7, 8];
-  const extraDurationOptions = [9, 10, 15, 20, 25, 30];
+  // Dynamic duration options based on selected type
+  const getDurationOptions = () => {
+    switch (durationType) {
+      case "hours":
+        return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+      case "days":
+        return [1, 2, 3, 4, 5, 6, 7, 8];
+      case "weeks":
+        return [1, 2, 3, 4];
+      default:
+        return [1, 2, 3, 4, 5, 6, 7, 8];
+    }
+  };
+
+  const getExtraDurationOptions = () => {
+    switch (durationType) {
+      case "days":
+        return [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+      default:
+        return [];
+    }
+  };
+
+  const durationOptions = getDurationOptions();
+  const extraDurationOptions = getExtraDurationOptions();
+  const showDropdown = durationType === "days" && extraDurationOptions.length > 0;
 
   const durationLabels: Record<DurationType, string> = {
     hours: "Hours",
     days: "Days",
     weeks: "Weeks",
   };
+
+  // Calculate grid columns based on number of options + dropdown
+  const gridCols = showDropdown ? `grid-cols-${durationOptions.length + 1}` : `grid-cols-${durationOptions.length}`;
+  const gridColsClass = showDropdown
+    ? durationOptions.length === 8
+      ? "grid-cols-9"
+      : durationOptions.length === 4
+      ? "grid-cols-5"
+      : "grid-cols-13"
+    : durationOptions.length === 12
+    ? "grid-cols-12"
+    : durationOptions.length === 8
+    ? "grid-cols-8"
+    : durationOptions.length === 4
+    ? "grid-cols-4"
+    : "grid-cols-9";
 
   const handleDurationChange = (value: number) => {
     setDuration(value);
