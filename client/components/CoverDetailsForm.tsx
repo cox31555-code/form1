@@ -105,7 +105,7 @@ export default function CoverDetailsForm() {
                 <p className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-3">
                   Select Duration
                 </p>
-                <div className="grid grid-cols-4 gap-2">
+                <div className="grid grid-cols-9 gap-2">
                   {durationOptions.map((option) => (
                     <button
                       key={option}
