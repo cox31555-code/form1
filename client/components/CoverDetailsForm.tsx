@@ -131,19 +131,31 @@ export default function CoverDetailsForm() {
                   Select Duration
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {durationOptions.map((option) => (
-                    <button
-                      key={option}
-                      onClick={() => handleDurationChange(option)}
-                      className={`w-full py-2 rounded-lg font-bold transition-all duration-200 text-sm ${
-                        duration === option
-                          ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg shadow-blue-200 scale-105"
-                          : "border border-gray-200 text-gray-700 hover:border-blue-400 hover:bg-white active:scale-95"
-                      }`}
-                    >
-                      {option}
-                    </button>
-                  ))}
+                  {durationOptions.map((option) => {
+                    const buttonWidth =
+                      durationOptions.length === 12
+                        ? "w-[calc(8.333%-0.25rem)]"
+                        : durationOptions.length === 8 && showDropdown
+                        ? "w-[calc(11.111%-0.25rem)]"
+                        : durationOptions.length === 8
+                        ? "w-[calc(12.5%-0.25rem)]"
+                        : durationOptions.length === 4 && showDropdown
+                        ? "w-[calc(20%-0.25rem)]"
+                        : "w-[calc(25%-0.25rem)]";
+                    return (
+                      <button
+                        key={option}
+                        onClick={() => handleDurationChange(option)}
+                        className={`py-2 rounded-lg font-bold transition-all duration-200 text-sm flex-shrink-0 ${buttonWidth} ${
+                          duration === option
+                            ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg shadow-blue-200 scale-105"
+                            : "border border-gray-200 text-gray-700 hover:border-blue-400 hover:bg-white active:scale-95"
+                        }`}
+                      >
+                        {option}
+                      </button>
+                    );
+                  })}
 
                   {/* Custom Dropdown for more options - only show for Days */}
                   {showDropdown && (
