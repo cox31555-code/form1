@@ -43,21 +43,6 @@ export default function CoverDetailsForm() {
     weeks: "Weeks",
   };
 
-  // Calculate grid columns based on number of options + dropdown
-  const gridCols = showDropdown ? `grid-cols-${durationOptions.length + 1}` : `grid-cols-${durationOptions.length}`;
-  const gridColsClass = showDropdown
-    ? durationOptions.length === 8
-      ? "grid-cols-9"
-      : durationOptions.length === 4
-      ? "grid-cols-5"
-      : "grid-cols-13"
-    : durationOptions.length === 12
-    ? "grid-cols-12"
-    : durationOptions.length === 8
-    ? "grid-cols-8"
-    : durationOptions.length === 4
-    ? "grid-cols-4"
-    : "grid-cols-9";
 
   const handleDurationChange = (value: number) => {
     setDuration(value);
