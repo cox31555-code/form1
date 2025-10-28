@@ -235,13 +235,13 @@ export default function CoverDetailsForm() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-12 pt-6 border-t border-gray-100">
             <button
               onClick={handleBack}
-              className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 flex items-center justify-center gap-2 active:scale-95"
+              className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 flex items-center justify-center gap-2"
             >
               Back
             </button>
             <button
               onClick={handleNext}
-              className="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg font-semibold hover:bg-blue-800 transition-all duration-200 flex items-center justify-center gap-2 active:scale-95"
+              className="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg font-semibold hover:bg-blue-800 transition-all duration-200 flex items-center justify-center gap-2"
             >
               Next
             </button>
