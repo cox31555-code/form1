@@ -27,7 +27,10 @@ export default function CoverDetailsForm() {
   const getExtraDurationOptions = () => {
     switch (durationType) {
       case "days":
-        return [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+        return [
+          9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
+          27, 28, 29, 30, 31,
+        ];
       default:
         return [];
     }
@@ -35,14 +38,14 @@ export default function CoverDetailsForm() {
 
   const durationOptions = getDurationOptions();
   const extraDurationOptions = getExtraDurationOptions();
-  const showDropdown = durationType === "days" && extraDurationOptions.length > 0;
+  const showDropdown =
+    durationType === "days" && extraDurationOptions.length > 0;
 
   const durationLabels: Record<DurationType, string> = {
     hours: "Hours",
     days: "Days",
     weeks: "Weeks",
   };
-
 
   const handleDurationChange = (value: number) => {
     setDuration(value);
@@ -132,12 +135,12 @@ export default function CoverDetailsForm() {
                       durationOptions.length === 12
                         ? "w-[calc(8.333%-0.1875rem)]"
                         : durationOptions.length === 8 && showDropdown
-                        ? "w-[calc(11.111%-0.1875rem)]"
-                        : durationOptions.length === 8
-                        ? "w-[calc(12.5%-0.1875rem)]"
-                        : durationOptions.length === 4 && showDropdown
-                        ? "w-[calc(20%-0.1875rem)]"
-                        : "w-[calc(25%-0.1875rem)]";
+                          ? "w-[calc(11.111%-0.1875rem)]"
+                          : durationOptions.length === 8
+                            ? "w-[calc(12.5%-0.1875rem)]"
+                            : durationOptions.length === 4 && showDropdown
+                              ? "w-[calc(20%-0.1875rem)]"
+                              : "w-[calc(25%-0.1875rem)]";
                     return (
                       <button
                         key={option}
@@ -160,7 +163,9 @@ export default function CoverDetailsForm() {
                         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                         className="w-full py-2 border border-gray-200 rounded-lg flex items-center justify-center hover:border-blue-400 hover:bg-white transition-all duration-200 text-gray-600 hover:text-gray-900"
                       >
-                        <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`} />
+                        <ChevronDown
+                          className={`w-5 h-5 transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`}
+                        />
                       </button>
 
                       {isDropdownOpen && (
