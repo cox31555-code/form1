@@ -36,15 +36,15 @@ export default function CoverDetailsForm() {
   };
 
   return (
-    <div className="min-h-screen bg-white py-8 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-2xl mx-auto">
-        <div className="bg-white">
+        <div className="bg-white rounded-lg shadow-sm p-8">
           {/* Header */}
-          <div className="flex items-center gap-3 mb-8">
-            <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-              <Check className="w-5 h-5 text-blue-600" />
+          <div className="flex items-center gap-4 mb-10">
+            <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+              <Check className="w-6 h-6 text-blue-600" strokeWidth={3} />
             </div>
-            <h1 className="text-3xl font-semibold text-gray-800">
+            <h1 className="text-4xl font-semibold text-gray-900">
               Cover Details
             </h1>
           </div>
