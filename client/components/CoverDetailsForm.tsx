@@ -68,14 +68,10 @@ export default function CoverDetailsForm() {
         <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
           {/* Header */}
           <div className="flex items-center gap-4 mb-12">
-            <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center shadow-md">
-              <Check className="w-7 h-7 text-white" strokeWidth={3} />
-            </div>
             <div>
               <h1 className="text-4xl font-bold text-gray-900 tracking-tight">
                 Cover Details
               </h1>
-              <p className="text-sm text-gray-500 mt-1">Step 2 of your application</p>
             </div>
           </div>
 
