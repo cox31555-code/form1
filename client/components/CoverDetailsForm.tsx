@@ -145,7 +145,7 @@ export default function CoverDetailsForm() {
                 <p className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-3">
                   Select Duration
                 </p>
-                <div className="grid grid-cols-9 gap-2">
+                <div className={`grid gap-2 ${gridColsClass}`}>
                   {durationOptions.map((option) => (
                     <button
                       key={option}
@@ -160,29 +160,31 @@ export default function CoverDetailsForm() {
                     </button>
                   ))}
 
-                  {/* Custom Dropdown for more options */}
-                  <div className="relative">
-                    <button
-                      onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                      className="w-full py-2 border border-gray-200 rounded-lg flex items-center justify-center hover:border-blue-400 hover:bg-white transition-all duration-200 text-gray-600 hover:text-gray-900"
-                    >
-                      <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`} />
-                    </button>
+                  {/* Custom Dropdown for more options - only show for Days */}
+                  {showDropdown && (
+                    <div className="relative">
+                      <button
+                        onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                        className="w-full py-2 border border-gray-200 rounded-lg flex items-center justify-center hover:border-blue-400 hover:bg-white transition-all duration-200 text-gray-600 hover:text-gray-900"
+                      >
+                        <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`} />
+                      </button>
 
-                    {isDropdownOpen && (
-                      <div className="absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-xl z-50 min-w-20">
-                        {extraDurationOptions.map((option) => (
-                          <button
-                            key={option}
-                            onClick={() => handleDurationChange(option)}
-                            className="w-full px-4 py-2 text-left text-gray-900 hover:bg-blue-50 transition-colors first:rounded-t-lg last:rounded-b-lg font-medium"
-                          >
-                            {option}
-                          </button>
-                        ))}
-                      </div>
-                    )}
-                  </div>
+                      {isDropdownOpen && (
+                        <div className="absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-xl z-50 min-w-20 max-h-60 overflow-y-auto">
+                          {extraDurationOptions.map((option) => (
+                            <button
+                              key={option}
+                              onClick={() => handleDurationChange(option)}
+                              className="w-full px-4 py-2 text-left text-gray-900 hover:bg-blue-50 transition-colors first:rounded-t-lg last:rounded-b-lg font-medium"
+                            >
+                              {option}
+                            </button>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
