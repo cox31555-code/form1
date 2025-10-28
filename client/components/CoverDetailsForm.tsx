@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Calendar, Clock, Check, ChevronDown } from "lucide-react";
-import * as SelectPrimitive from "@radix-ui/react-select";
 
 type DurationType = "hours" | "days" | "weeks";
 
@@ -11,8 +10,11 @@ export default function CoverDetailsForm() {
   const [duration, setDuration] = useState(1);
   const [startDate, setStartDate] = useState("");
   const [startTime, setStartTime] = useState("10:00");
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const durationOptions = [1, 2, 3, 4, 5, 6, 7, 8];
+  const extraDurationOptions = [9, 10, 15, 20, 25, 30];
+
   const durationLabels: Record<DurationType, string> = {
     hours: "Hours",
     days: "Days",
@@ -21,6 +23,7 @@ export default function CoverDetailsForm() {
 
   const handleDurationChange = (value: number) => {
     setDuration(value);
+    setIsDropdownOpen(false);
   };
 
   const handleNext = () => {
@@ -119,36 +122,29 @@ export default function CoverDetailsForm() {
                     </button>
                   ))}
 
-                  {/* Dropdown for more options */}
-                  <SelectPrimitive.Root
-                    value={duration > 8 ? duration.toString() : ""}
-                    onValueChange={(val) => handleDurationChange(parseInt(val))}
-                  >
-                    <SelectPrimitive.Trigger className="w-10 h-10 border border-gray-200 rounded-lg flex items-center justify-center hover:border-blue-400 hover:bg-white transition-all duration-200 text-gray-600 hover:text-gray-900 data-[state=open]:border-blue-500 data-[state=open]:bg-white data-[state=open]:shadow-lg data-[state=open]:shadow-blue-100">
-                      <ChevronDown className="w-4 h-4" />
-                    </SelectPrimitive.Trigger>
+                  {/* Custom Dropdown for more options */}
+                  <div className="relative">
+                    <button
+                      onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                      className="w-10 h-10 border border-gray-200 rounded-lg flex items-center justify-center hover:border-blue-400 hover:bg-white transition-all duration-200 text-gray-600 hover:text-gray-900"
+                    >
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`} />
+                    </button>
 
-                    <SelectPrimitive.Portal>
-                      <SelectPrimitive.Content className="overflow-hidden bg-white border border-gray-200 rounded-lg shadow-xl z-50 min-w-16">
-                        <SelectPrimitive.ScrollUpButton className="flex items-center justify-center h-6 bg-white text-gray-600 cursor-default" />
-                        <SelectPrimitive.Viewport className="p-1">
-                          {[9, 10, 15, 20, 25, 30].map((option) => (
-                            <SelectPrimitive.Item
-                              key={option}
-                              value={option.toString()}
-                              className="relative flex items-center px-8 py-2 text-gray-900 rounded hover:bg-blue-50 cursor-pointer outline-none data-[state=checked]:bg-blue-100 data-[state=checked]:font-semibold transition-colors"
-                            >
-                              <SelectPrimitive.ItemText>{option}</SelectPrimitive.ItemText>
-                              <SelectPrimitive.ItemIndicator className="absolute left-2 flex items-center">
-                                <Check className="w-4 h-4 text-blue-600" />
-                              </SelectPrimitive.ItemIndicator>
-                            </SelectPrimitive.Item>
-                          ))}
-                        </SelectPrimitive.Viewport>
-                        <SelectPrimitive.ScrollDownButton className="flex items-center justify-center h-6 bg-white text-gray-600 cursor-default" />
-                      </SelectPrimitive.Content>
-                    </SelectPrimitive.Portal>
-                  </SelectPrimitive.Root>
+                    {isDropdownOpen && (
+                      <div className="absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-xl z-50 min-w-20">
+                        {extraDurationOptions.map((option) => (
+                          <button
+                            key={option}
+                            onClick={() => handleDurationChange(option)}
+                            className="w-full px-4 py-2 text-left text-gray-900 hover:bg-blue-50 transition-colors first:rounded-t-lg last:rounded-b-lg font-medium"
+                          >
+                            {option}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
