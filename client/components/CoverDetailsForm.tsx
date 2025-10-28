@@ -65,7 +65,7 @@ export default function CoverDetailsForm() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-[720px] mx-auto">
-        <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+        <div className="bg-white rounded-xl p-8 border border-gray-100">
           {/* Header */}
           <div className="flex items-center gap-4 mb-12">
             <div>
@@ -101,7 +101,7 @@ export default function CoverDetailsForm() {
                     onClick={() => setDurationType(key)}
                     className={`py-3 px-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center gap-2 ${
                       durationType === key
-                        ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg shadow-blue-200 scale-105"
+                        ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white scale-105"
                         : "border border-gray-200 text-gray-700 hover:border-blue-300 hover:bg-blue-50 active:scale-95"
                     }`}
                   >
@@ -144,7 +144,7 @@ export default function CoverDetailsForm() {
                         onClick={() => handleDurationChange(option)}
                         className={`py-2 rounded-lg font-bold transition-all duration-200 text-sm flex-shrink-0 ${buttonWidth} ${
                           duration === option
-                            ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg shadow-blue-200 scale-105"
+                            ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white scale-105"
                             : "border border-gray-200 text-gray-700 hover:border-blue-400 hover:bg-white active:scale-95"
                         }`}
                       >
@@ -164,7 +164,7 @@ export default function CoverDetailsForm() {
                       </button>
 
                       {isDropdownOpen && (
-                        <div className="absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-xl z-50 min-w-20 max-h-60 overflow-y-auto">
+                        <div className="absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-lg z-50 min-w-20 max-h-60 overflow-y-auto">
                           {extraDurationOptions.map((option) => (
                             <button
                               key={option}
@@ -237,13 +237,13 @@ export default function CoverDetailsForm() {
               onClick={handleBack}
               className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 flex items-center justify-center gap-2 active:scale-95"
             >
-              <span>←</span> Back
+              Back
             </button>
             <button
               onClick={handleNext}
-              className="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-300 transition-all duration-200 flex items-center justify-center gap-2 active:scale-95"
+              className="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg font-semibold hover:bg-blue-800 transition-all duration-200 flex items-center justify-center gap-2 active:scale-95"
             >
-              Next <span>→</span>
+              Next
             </button>
           </div>
         </div>
