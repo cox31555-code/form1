@@ -134,14 +134,14 @@ export default function CoverDetailsForm() {
                   {durationOptions.map((option) => {
                     const buttonWidth =
                       durationOptions.length === 12
-                        ? "w-[calc(8.333%-0.25rem)]"
+                        ? "w-[calc(8.333%-0.1875rem)]"
                         : durationOptions.length === 8 && showDropdown
-                        ? "w-[calc(11.111%-0.25rem)]"
+                        ? "w-[calc(11.111%-0.1875rem)]"
                         : durationOptions.length === 8
-                        ? "w-[calc(12.5%-0.25rem)]"
+                        ? "w-[calc(12.5%-0.1875rem)]"
                         : durationOptions.length === 4 && showDropdown
-                        ? "w-[calc(20%-0.25rem)]"
-                        : "w-[calc(25%-0.25rem)]";
+                        ? "w-[calc(20%-0.1875rem)]"
+                        : "w-[calc(25%-0.1875rem)]";
                     return (
                       <button
                         key={option}
