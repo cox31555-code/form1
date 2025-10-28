@@ -159,7 +159,7 @@ export default function CoverDetailsForm() {
 
                   {/* Custom Dropdown for more options - only show for Days */}
                   {showDropdown && (
-                    <div className="relative">
+                    <div className="relative w-[calc(11.111%-0.25rem)] flex-shrink-0">
                       <button
                         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                         className="w-full py-2 border border-gray-200 rounded-lg flex items-center justify-center hover:border-blue-400 hover:bg-white transition-all duration-200 text-gray-600 hover:text-gray-900"
