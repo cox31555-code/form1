@@ -101,8 +101,8 @@ export default function CoverDetailsForm() {
                     onClick={() => setDurationType(key)}
                     className={`py-3 px-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center gap-2 ${
                       durationType === key
-                        ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white scale-105"
-                        : "border border-gray-200 text-gray-700 hover:border-blue-300 hover:bg-blue-50 active:scale-95"
+                        ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white"
+                        : "border border-gray-200 text-gray-700 hover:border-blue-300 hover:bg-blue-50"
                     }`}
                   >
                     <div
@@ -144,8 +144,8 @@ export default function CoverDetailsForm() {
                         onClick={() => handleDurationChange(option)}
                         className={`py-2 rounded-lg font-bold transition-all duration-200 text-sm flex-shrink-0 ${buttonWidth} ${
                           duration === option
-                            ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white scale-105"
-                            : "border border-gray-200 text-gray-700 hover:border-blue-400 hover:bg-white active:scale-95"
+                            ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white"
+                            : "border border-gray-200 text-gray-700 hover:border-blue-400 hover:bg-white"
                         }`}
                       >
                         {option}
