@@ -74,8 +74,8 @@ export default function PersonalDetailsForm() {
 
           {/* Your Details Section */}
           <div className="mb-8">
-            <div className="bg-blue-100 px-4 py-3 rounded-lg mb-6 border-l-4 border-blue-600">
-              <h2 className="text-base font-bold text-gray-900">Your Details</h2>
+            <div className="mb-6">
+              <h2 className="text-xl font-bold text-gray-900">Your Details</h2>
             </div>
 
             <div className="space-y-6">
@@ -171,8 +171,8 @@ export default function PersonalDetailsForm() {
 
           {/* Address Section */}
           <div className="mb-8">
-            <div className="bg-blue-100 px-4 py-3 rounded-lg mb-6 border-l-4 border-blue-600">
-              <h2 className="text-base font-bold text-gray-900">Address</h2>
+            <div className="mb-6">
+              <h2 className="text-xl font-bold text-gray-900">Address</h2>
             </div>
 
             <div className="space-y-6">
@@ -198,8 +198,8 @@ export default function PersonalDetailsForm() {
 
           {/* Employment Section */}
           <div className="mb-8">
-            <div className="bg-blue-100 px-4 py-3 rounded-lg mb-6 border-l-4 border-blue-600">
-              <h2 className="text-base font-bold text-gray-900">Employment</h2>
+            <div className="mb-6">
+              <h2 className="text-xl font-bold text-gray-900">Employment</h2>
             </div>
 
             <div className="space-y-6">
@@ -275,8 +275,8 @@ export default function PersonalDetailsForm() {
 
           {/* Car Parking Section */}
           <div className="mb-8">
-            <div className="bg-blue-100 px-4 py-3 rounded-lg mb-6 border-l-4 border-blue-600">
-              <h2 className="text-base font-bold text-gray-900">Car Parking</h2>
+            <div className="mb-6">
+              <h2 className="text-xl font-bold text-gray-900">Car Parking</h2>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -356,8 +356,8 @@ export default function PersonalDetailsForm() {
 
           {/* Car Usage Section */}
           <div className="mb-8">
-            <div className="bg-blue-100 px-4 py-3 rounded-lg mb-6 border-l-4 border-blue-600">
-              <h2 className="text-base font-bold text-gray-900">Car Usage</h2>
+            <div className="mb-6">
+              <h2 className="text-xl font-bold text-gray-900">Car Usage</h2>
             </div>
 
             <div>
@@ -389,8 +389,8 @@ export default function PersonalDetailsForm() {
 
           {/* License & Claims Section */}
           <div className="mb-8">
-            <div className="bg-blue-100 px-4 py-3 rounded-lg mb-6 border-l-4 border-blue-600">
-              <h2 className="text-base font-bold text-gray-900">License & Claims</h2>
+            <div className="mb-6">
+              <h2 className="text-xl font-bold text-gray-900">License & Claims</h2>
             </div>
 
             <div className="space-y-6">
@@ -508,8 +508,8 @@ export default function PersonalDetailsForm() {
 
           {/* Declarations Section */}
           <div className="mb-8">
-            <div className="bg-blue-100 px-4 py-3 rounded-lg mb-6 border-l-4 border-blue-600">
-              <h2 className="text-base font-bold text-gray-900">Declarations</h2>
+            <div className="mb-6">
+              <h2 className="text-xl font-bold text-gray-900">Declarations</h2>
             </div>
 
             <div className="space-y-6">
