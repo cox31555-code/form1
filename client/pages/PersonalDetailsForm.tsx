@@ -73,7 +73,7 @@ export default function PersonalDetailsForm() {
           </div>
 
           {/* Your Details Section */}
-          <div className="mb-8">
+          <div className="mb-12">
             <div className="mb-6 px-4 py-3 bg-gray-50 rounded-lg border-l-4 border-blue-600">
               <h2 className="text-lg font-bold text-gray-900">Your Details</h2>
             </div>
@@ -170,7 +170,7 @@ export default function PersonalDetailsForm() {
           </div>
 
           {/* Address Section */}
-          <div className="mb-8">
+          <div className="mb-12">
             <div className="mb-6 px-4 py-3 bg-gray-50 rounded-lg border-l-4 border-blue-600">
               <h2 className="text-lg font-bold text-gray-900">Address</h2>
             </div>
@@ -197,7 +197,7 @@ export default function PersonalDetailsForm() {
           </div>
 
           {/* Employment Section */}
-          <div className="mb-8">
+          <div className="mb-12">
             <div className="mb-6 px-4 py-3 bg-gray-50 rounded-lg border-l-4 border-blue-600">
               <h2 className="text-lg font-bold text-gray-900">Employment</h2>
             </div>
@@ -274,7 +274,7 @@ export default function PersonalDetailsForm() {
           </div>
 
           {/* Car Parking Section */}
-          <div className="mb-8">
+          <div className="mb-12">
             <div className="mb-6 px-4 py-3 bg-gray-50 rounded-lg border-l-4 border-blue-600">
               <h2 className="text-lg font-bold text-gray-900">Car Parking</h2>
             </div>
@@ -355,7 +355,7 @@ export default function PersonalDetailsForm() {
           </div>
 
           {/* Car Usage Section */}
-          <div className="mb-8">
+          <div className="mb-12">
             <div className="mb-6 px-4 py-3 bg-gray-50 rounded-lg border-l-4 border-blue-600">
               <h2 className="text-lg font-bold text-gray-900">Car Usage</h2>
             </div>
@@ -388,7 +388,7 @@ export default function PersonalDetailsForm() {
           </div>
 
           {/* License & Claims Section */}
-          <div className="mb-8">
+          <div className="mb-12">
             <div className="mb-6 px-4 py-3 bg-gray-50 rounded-lg border-l-4 border-blue-600">
               <h2 className="text-lg font-bold text-gray-900">License & Claims</h2>
             </div>
@@ -507,7 +507,7 @@ export default function PersonalDetailsForm() {
           </div>
 
           {/* Declarations Section */}
-          <div className="mb-8">
+          <div className="mb-12">
             <div className="mb-6 px-4 py-3 bg-gray-50 rounded-lg border-l-4 border-blue-600">
               <h2 className="text-lg font-bold text-gray-900">Declarations</h2>
             </div>
