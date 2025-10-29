@@ -74,8 +74,7 @@ export default function PersonalDetailsForm() {
 
           {/* Your Details Section */}
           <div className="mb-8">
-            <div className="mb-6 pb-3 border-b-2 border-blue-200 flex items-center gap-3">
-              <User className="w-5 h-5 text-blue-600" />
+            <div className="mb-6 pb-3 border-b-2 border-gray-200">
               <h2 className="text-lg font-bold text-gray-900">Your Details</h2>
             </div>
 
@@ -172,8 +171,7 @@ export default function PersonalDetailsForm() {
 
           {/* Address Section */}
           <div className="mb-8">
-            <div className="mb-6 pb-3 border-b-2 border-blue-200 flex items-center gap-3">
-              <MapPin className="w-5 h-5 text-blue-600" />
+            <div className="mb-6 pb-3 border-b-2 border-gray-200">
               <h2 className="text-lg font-bold text-gray-900">Address</h2>
             </div>
 
@@ -200,8 +198,7 @@ export default function PersonalDetailsForm() {
 
           {/* Employment Section */}
           <div className="mb-8">
-            <div className="mb-6 pb-3 border-b-2 border-blue-200 flex items-center gap-3">
-              <Briefcase className="w-5 h-5 text-blue-600" />
+            <div className="mb-6 pb-3 border-b-2 border-gray-200">
               <h2 className="text-lg font-bold text-gray-900">Employment</h2>
             </div>
 
@@ -278,8 +275,7 @@ export default function PersonalDetailsForm() {
 
           {/* Car Parking Section */}
           <div className="mb-8">
-            <div className="mb-6 pb-3 border-b-2 border-blue-200 flex items-center gap-3">
-              <Car className="w-5 h-5 text-blue-600" />
+            <div className="mb-6 pb-3 border-b-2 border-gray-200">
               <h2 className="text-lg font-bold text-gray-900">Car Parking</h2>
             </div>
 
@@ -360,8 +356,7 @@ export default function PersonalDetailsForm() {
 
           {/* Car Usage Section */}
           <div className="mb-8">
-            <div className="mb-6 pb-3 border-b-2 border-blue-200 flex items-center gap-3">
-              <Navigation className="w-5 h-5 text-blue-600" />
+            <div className="mb-6 pb-3 border-b-2 border-gray-200">
               <h2 className="text-lg font-bold text-gray-900">Car Usage</h2>
             </div>
 
@@ -394,8 +389,7 @@ export default function PersonalDetailsForm() {
 
           {/* License & Claims Section */}
           <div className="mb-8">
-            <div className="mb-6 pb-3 border-b-2 border-blue-200 flex items-center gap-3">
-              <FileText className="w-5 h-5 text-blue-600" />
+            <div className="mb-6 pb-3 border-b-2 border-gray-200">
               <h2 className="text-lg font-bold text-gray-900">License & Claims</h2>
             </div>
 
@@ -514,8 +508,7 @@ export default function PersonalDetailsForm() {
 
           {/* Declarations Section */}
           <div className="mb-8">
-            <div className="mb-6 pb-3 border-b-2 border-blue-200 flex items-center gap-3">
-              <CheckSquare className="w-5 h-5 text-blue-600" />
+            <div className="mb-6 pb-3 border-b-2 border-gray-200">
               <h2 className="text-lg font-bold text-gray-900">Declarations</h2>
             </div>
 
