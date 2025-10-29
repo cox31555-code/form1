@@ -74,7 +74,8 @@ export default function PersonalDetailsForm() {
 
           {/* Your Details Section */}
           <div className="mb-8">
-            <div className="mb-6">
+            <div className="mb-6 flex items-center gap-3 pb-3 border-b-2 border-gray-200">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-600 font-bold text-sm">1</div>
               <h2 className="text-xl font-bold text-gray-900">Your Details</h2>
             </div>
 
@@ -171,7 +172,8 @@ export default function PersonalDetailsForm() {
 
           {/* Address Section */}
           <div className="mb-8">
-            <div className="mb-6">
+            <div className="mb-6 flex items-center gap-3 pb-3 border-b-2 border-gray-200">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-600 font-bold text-sm">2</div>
               <h2 className="text-xl font-bold text-gray-900">Address</h2>
             </div>
 
@@ -198,7 +200,8 @@ export default function PersonalDetailsForm() {
 
           {/* Employment Section */}
           <div className="mb-8">
-            <div className="mb-6">
+            <div className="mb-6 flex items-center gap-3 pb-3 border-b-2 border-gray-200">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-purple-100 text-purple-600 font-bold text-sm">3</div>
               <h2 className="text-xl font-bold text-gray-900">Employment</h2>
             </div>
 
@@ -275,7 +278,8 @@ export default function PersonalDetailsForm() {
 
           {/* Car Parking Section */}
           <div className="mb-8">
-            <div className="mb-6">
+            <div className="mb-6 flex items-center gap-3 pb-3 border-b-2 border-gray-200">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-orange-100 text-orange-600 font-bold text-sm">4</div>
               <h2 className="text-xl font-bold text-gray-900">Car Parking</h2>
             </div>
 
@@ -356,7 +360,8 @@ export default function PersonalDetailsForm() {
 
           {/* Car Usage Section */}
           <div className="mb-8">
-            <div className="mb-6">
+            <div className="mb-6 flex items-center gap-3 pb-3 border-b-2 border-gray-200">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-red-100 text-red-600 font-bold text-sm">5</div>
               <h2 className="text-xl font-bold text-gray-900">Car Usage</h2>
             </div>
 
@@ -389,7 +394,8 @@ export default function PersonalDetailsForm() {
 
           {/* License & Claims Section */}
           <div className="mb-8">
-            <div className="mb-6">
+            <div className="mb-6 flex items-center gap-3 pb-3 border-b-2 border-gray-200">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-cyan-100 text-cyan-600 font-bold text-sm">6</div>
               <h2 className="text-xl font-bold text-gray-900">License & Claims</h2>
             </div>
 
@@ -508,7 +514,8 @@ export default function PersonalDetailsForm() {
 
           {/* Declarations Section */}
           <div className="mb-8">
-            <div className="mb-6">
+            <div className="mb-6 flex items-center gap-3 pb-3 border-b-2 border-gray-200">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 font-bold text-sm">7</div>
               <h2 className="text-xl font-bold text-gray-900">Declarations</h2>
             </div>
 
