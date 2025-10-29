@@ -74,8 +74,9 @@ export default function PersonalDetailsForm() {
 
           {/* Your Details Section */}
           <div className="mb-8">
-            <div className="mb-6 pb-3 border-b-2 border-blue-200">
-              <h2 className="text-lg font-bold text-gray-900"><span className="text-blue-600">01</span> Your Details</h2>
+            <div className="mb-6 pb-3 border-b-2 border-blue-200 flex items-center gap-3">
+              <User className="w-5 h-5 text-blue-600" />
+              <h2 className="text-lg font-bold text-gray-900">Your Details</h2>
             </div>
 
             <div className="space-y-6">
@@ -171,8 +172,9 @@ export default function PersonalDetailsForm() {
 
           {/* Address Section */}
           <div className="mb-8">
-            <div className="mb-6 pb-3 border-b-2 border-blue-200">
-              <h2 className="text-lg font-bold text-gray-900"><span className="text-blue-600">02</span> Address</h2>
+            <div className="mb-6 pb-3 border-b-2 border-blue-200 flex items-center gap-3">
+              <MapPin className="w-5 h-5 text-blue-600" />
+              <h2 className="text-lg font-bold text-gray-900">Address</h2>
             </div>
 
             <div className="space-y-6">
@@ -198,8 +200,9 @@ export default function PersonalDetailsForm() {
 
           {/* Employment Section */}
           <div className="mb-8">
-            <div className="mb-6 pb-3 border-b-2 border-blue-200">
-              <h2 className="text-lg font-bold text-gray-900"><span className="text-blue-600">03</span> Employment</h2>
+            <div className="mb-6 pb-3 border-b-2 border-blue-200 flex items-center gap-3">
+              <Briefcase className="w-5 h-5 text-blue-600" />
+              <h2 className="text-lg font-bold text-gray-900">Employment</h2>
             </div>
 
             <div className="space-y-6">
@@ -275,8 +278,9 @@ export default function PersonalDetailsForm() {
 
           {/* Car Parking Section */}
           <div className="mb-8">
-            <div className="mb-6 pb-3 border-b-2 border-blue-200">
-              <h2 className="text-lg font-bold text-gray-900"><span className="text-blue-600">04</span> Car Parking</h2>
+            <div className="mb-6 pb-3 border-b-2 border-blue-200 flex items-center gap-3">
+              <Car className="w-5 h-5 text-blue-600" />
+              <h2 className="text-lg font-bold text-gray-900">Car Parking</h2>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -356,8 +360,9 @@ export default function PersonalDetailsForm() {
 
           {/* Car Usage Section */}
           <div className="mb-8">
-            <div className="mb-6 pb-3 border-b-2 border-blue-200">
-              <h2 className="text-lg font-bold text-gray-900"><span className="text-blue-600">05</span> Car Usage</h2>
+            <div className="mb-6 pb-3 border-b-2 border-blue-200 flex items-center gap-3">
+              <Navigation className="w-5 h-5 text-blue-600" />
+              <h2 className="text-lg font-bold text-gray-900">Car Usage</h2>
             </div>
 
             <div>
@@ -389,8 +394,9 @@ export default function PersonalDetailsForm() {
 
           {/* License & Claims Section */}
           <div className="mb-8">
-            <div className="mb-6 pb-3 border-b-2 border-blue-200">
-              <h2 className="text-lg font-bold text-gray-900"><span className="text-blue-600">06</span> License & Claims</h2>
+            <div className="mb-6 pb-3 border-b-2 border-blue-200 flex items-center gap-3">
+              <FileText className="w-5 h-5 text-blue-600" />
+              <h2 className="text-lg font-bold text-gray-900">License & Claims</h2>
             </div>
 
             <div className="space-y-6">
@@ -508,8 +514,9 @@ export default function PersonalDetailsForm() {
 
           {/* Declarations Section */}
           <div className="mb-8">
-            <div className="mb-6 pb-3 border-b-2 border-blue-200">
-              <h2 className="text-lg font-bold text-gray-900"><span className="text-blue-600">07</span> Declarations</h2>
+            <div className="mb-6 pb-3 border-b-2 border-blue-200 flex items-center gap-3">
+              <CheckSquare className="w-5 h-5 text-blue-600" />
+              <h2 className="text-lg font-bold text-gray-900">Declarations</h2>
             </div>
 
             <div className="space-y-6">
