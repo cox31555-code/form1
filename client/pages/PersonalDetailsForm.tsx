@@ -371,7 +371,7 @@ export default function PersonalDetailsForm() {
                 {[
                   { value: "social", label: "Social use only", description: "Personal use such as shopping or visiting friends and family." },
                   { value: "commuting", label: "Social and commuting", description: "Personal use and commuting to a single base location." },
-                  { value: "business", label: "Social, commuting and business", description: "You drive to various locations." },
+                  { value: "business", label: "Social, commuting and business", description: "You drive to various locations for work." },
                 ].map((option) => (
                   <label key={option.value} className="flex items-start p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
                     <input
