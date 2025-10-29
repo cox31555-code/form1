@@ -2,7 +2,15 @@ import { useState } from "react";
 import { Calendar, Sun, Moon } from "lucide-react";
 
 type CarParkingDay = "home" | "office" | "public" | "secure" | "street";
-type CarParkingNight = "drive" | "street" | "garage" | "locked" | "away" | "car_park" | "work" | "private";
+type CarParkingNight =
+  | "drive"
+  | "street"
+  | "garage"
+  | "locked"
+  | "away"
+  | "car_park"
+  | "work"
+  | "private";
 type CarUsage = "social" | "commuting" | "business";
 
 export default function PersonalDetailsForm() {
@@ -15,17 +23,26 @@ export default function PersonalDetailsForm() {
   const [employmentStatus, setEmploymentStatus] = useState("");
   const [industry, setIndustry] = useState("");
   const [occupation, setOccupation] = useState("");
-  const [carParkingDay, setCarParkingDay] = useState<CarParkingDay | null>(null);
-  const [carParkingNight, setCarParkingNight] = useState<CarParkingNight | null>(null);
+  const [carParkingDay, setCarParkingDay] = useState<CarParkingDay | null>(
+    null,
+  );
+  const [carParkingNight, setCarParkingNight] =
+    useState<CarParkingNight | null>(null);
   const [carUsage, setCarUsage] = useState<CarUsage | null>(null);
   const [licenseType, setLicenseType] = useState("");
   const [licenseHeld, setLicenseHeld] = useState("");
   const [licenseNumber, setLicenseNumber] = useState("");
   const [nclYears, setNclYears] = useState("");
   const [excessAmount, setExcessAmount] = useState("");
-  const [criminalConvictions, setCriminalConvictions] = useState<boolean | null>(null);
-  const [medicalConditions, setMedicalConditions] = useState<boolean | null>(null);
-  const [insuranceCancelled, setInsuranceCancelled] = useState<boolean | null>(null);
+  const [criminalConvictions, setCriminalConvictions] = useState<
+    boolean | null
+  >(null);
+  const [medicalConditions, setMedicalConditions] = useState<boolean | null>(
+    null,
+  );
+  const [insuranceCancelled, setInsuranceCancelled] = useState<boolean | null>(
+    null,
+  );
 
   const handleBack = () => {
     console.log("Back clicked");
@@ -221,8 +238,18 @@ export default function PersonalDetailsForm() {
                       <option value="unemployed">Unemployed</option>
                     </select>
                     <div className="absolute right-4 top-3.5 pointer-events-none text-gray-400">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                      <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -239,7 +266,8 @@ export default function PersonalDetailsForm() {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder:text-gray-400 transition-all duration-200 hover:border-gray-400"
                   />
                   <p className="text-xs text-red-600 mt-1">
-                    Industry and occupation are required unless you are retired or unemployed
+                    Industry and occupation are required unless you are retired
+                    or unemployed
                   </p>
                 </div>
               </div>
@@ -261,8 +289,18 @@ export default function PersonalDetailsForm() {
                     <option value="other">Other</option>
                   </select>
                   <div className="absolute right-4 top-3.5 pointer-events-none text-gray-400">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -285,8 +323,13 @@ export default function PersonalDetailsForm() {
                 <div className="bg-blue-50 rounded-lg p-4 mb-4 flex items-center gap-3">
                   <Sun className="w-8 h-8 text-blue-600" />
                   <div>
-                    <p className="font-bold text-gray-900">Where do you keep your car during the day?</p>
-                    <p className="text-sm text-gray-600">Select where your car is typically parked during daytime hours.</p>
+                    <p className="font-bold text-gray-900">
+                      Where do you keep your car during the day?
+                    </p>
+                    <p className="text-sm text-gray-600">
+                      Select where your car is typically parked during daytime
+                      hours.
+                    </p>
                   </div>
                 </div>
                 <div className="space-y-3">
@@ -297,21 +340,30 @@ export default function PersonalDetailsForm() {
                     { value: "secure", label: "Secure public car park" },
                     { value: "street", label: "Street away from home" },
                   ].map((option) => (
-                    <label key={option.value} className="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
+                    <label
+                      key={option.value}
+                      className="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors"
+                    >
                       <input
                         type="radio"
                         name="parking-day"
                         value={option.value}
                         checked={carParkingDay === option.value}
-                        onChange={(e) => setCarParkingDay(e.target.value as CarParkingDay)}
+                        onChange={(e) =>
+                          setCarParkingDay(e.target.value as CarParkingDay)
+                        }
                         className="w-5 h-5 text-blue-600 cursor-pointer"
                       />
-                      <span className="ml-3 font-medium text-gray-900">{option.label}</span>
+                      <span className="ml-3 font-medium text-gray-900">
+                        {option.label}
+                      </span>
                     </label>
                   ))}
                 </div>
                 <p className="text-xs text-red-600 mt-3">
-                  Invalid option: expected one of "At home"/"Office or factory car park"/"Open public car park"/"Secure public car park"/"Street away from home"
+                  Invalid option: expected one of "At home"/"Office or factory
+                  car park"/"Open public car park"/"Secure public car
+                  park"/"Street away from home"
                 </p>
               </div>
 
@@ -320,8 +372,13 @@ export default function PersonalDetailsForm() {
                 <div className="bg-blue-50 rounded-lg p-4 mb-4 flex items-center gap-3">
                   <Moon className="w-8 h-8 text-blue-600" />
                   <div>
-                    <p className="font-bold text-gray-900">Where do you keep your car during the night?</p>
-                    <p className="text-sm text-gray-600">Select where your car is typically parked during nighttime hours.</p>
+                    <p className="font-bold text-gray-900">
+                      Where do you keep your car during the night?
+                    </p>
+                    <p className="text-sm text-gray-600">
+                      Select where your car is typically parked during nighttime
+                      hours.
+                    </p>
                   </div>
                 </div>
                 <div className="space-y-3">
@@ -334,21 +391,30 @@ export default function PersonalDetailsForm() {
                     { value: "work", label: "Work car park" },
                     { value: "private", label: "Private property" },
                   ].map((option) => (
-                    <label key={option.value} className="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
+                    <label
+                      key={option.value}
+                      className="flex items-center p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors"
+                    >
                       <input
                         type="radio"
                         name="parking-night"
                         value={option.value}
                         checked={carParkingNight === option.value}
-                        onChange={(e) => setCarParkingNight(e.target.value as CarParkingNight)}
+                        onChange={(e) =>
+                          setCarParkingNight(e.target.value as CarParkingNight)
+                        }
                         className="w-5 h-5 text-blue-600 cursor-pointer"
                       />
-                      <span className="ml-3 font-medium text-gray-900">{option.label}</span>
+                      <span className="ml-3 font-medium text-gray-900">
+                        {option.label}
+                      </span>
                     </label>
                   ))}
                 </div>
                 <p className="text-xs text-red-600 mt-3">
-                  Invalid option: expected one of "Drive"/"Street outside home"/"Locked garage"/"Street away from home"/"Public car park"/"Work car park"/"Private property"
+                  Invalid option: expected one of "Drive"/"Street outside
+                  home"/"Locked garage"/"Street away from home"/"Public car
+                  park"/"Work car park"/"Private property"
                 </p>
               </div>
             </div>
@@ -361,14 +427,33 @@ export default function PersonalDetailsForm() {
             </div>
 
             <div>
-              <p className="text-gray-900 font-semibold mb-4">What do you use the car for?</p>
+              <p className="text-gray-900 font-semibold mb-4">
+                What do you use the car for?
+              </p>
               <div className="space-y-3">
                 {[
-                  { value: "social", label: "Social use only", description: "Personal use such as shopping or visiting friends and family." },
-                  { value: "commuting", label: "Social and commuting", description: "Personal use and commuting to a single base location." },
-                  { value: "business", label: "Social, commuting and business", description: "You drive to various locations for work." },
+                  {
+                    value: "social",
+                    label: "Social use only",
+                    description:
+                      "Personal use such as shopping or visiting friends and family.",
+                  },
+                  {
+                    value: "commuting",
+                    label: "Social and commuting",
+                    description:
+                      "Personal use and commuting to a single base location.",
+                  },
+                  {
+                    value: "business",
+                    label: "Social, commuting and business",
+                    description: "You drive to various locations for work.",
+                  },
                 ].map((option) => (
-                  <label key={option.value} className="flex items-start p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
+                  <label
+                    key={option.value}
+                    className="flex items-start p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors"
+                  >
                     <input
                       type="radio"
                       name="car-usage"
@@ -378,8 +463,12 @@ export default function PersonalDetailsForm() {
                       className="w-5 h-5 text-blue-600 cursor-pointer mt-1 flex-shrink-0"
                     />
                     <div className="ml-3">
-                      <p className="font-medium text-gray-900">{option.label}</p>
-                      <p className="text-sm text-gray-600">{option.description}</p>
+                      <p className="font-medium text-gray-900">
+                        {option.label}
+                      </p>
+                      <p className="text-sm text-gray-600">
+                        {option.description}
+                      </p>
                     </div>
                   </label>
                 ))}
@@ -390,7 +479,9 @@ export default function PersonalDetailsForm() {
           {/* License & Claims Section */}
           <div className="mb-12">
             <div className="mb-6 px-4 py-3 bg-gray-50 rounded-lg border-l-4 border-blue-600">
-              <h2 className="text-lg font-bold text-gray-900">License & Claims</h2>
+              <h2 className="text-lg font-bold text-gray-900">
+                License & Claims
+              </h2>
             </div>
 
             <div className="space-y-6">
@@ -411,8 +502,18 @@ export default function PersonalDetailsForm() {
                       <option value="category-c">Category C</option>
                     </select>
                     <div className="absolute right-4 top-3.5 pointer-events-none text-gray-400">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                      <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -433,8 +534,18 @@ export default function PersonalDetailsForm() {
                       <option value="more-5">More than 5 years</option>
                     </select>
                     <div className="absolute right-4 top-3.5 pointer-events-none text-gray-400">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                      <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -473,8 +584,18 @@ export default function PersonalDetailsForm() {
                       <option value="5">5+ years</option>
                     </select>
                     <div className="absolute right-4 top-3.5 pointer-events-none text-gray-400">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                      <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -496,8 +617,18 @@ export default function PersonalDetailsForm() {
                       <option value="1000">£1000</option>
                     </select>
                     <div className="absolute right-4 top-3.5 pointer-events-none text-gray-400">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                      <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                        />
                       </svg>
                     </div>
                   </div>
@@ -514,23 +645,42 @@ export default function PersonalDetailsForm() {
 
             <div className="space-y-6">
               {[
-                { key: "criminal", label: "Do you have any unspent or outstanding criminal convictions?" },
-                { key: "medical", label: "Do you have any medical conditions that are notifiable to the DVLA?" },
-                { key: "insurance", label: "Have you ever had insurance cancelled, a claim refused, a policy voided, or any special terms imposed?" },
+                {
+                  key: "criminal",
+                  label:
+                    "Do you have any unspent or outstanding criminal convictions?",
+                },
+                {
+                  key: "medical",
+                  label:
+                    "Do you have any medical conditions that are notifiable to the DVLA?",
+                },
+                {
+                  key: "insurance",
+                  label:
+                    "Have you ever had insurance cancelled, a claim refused, a policy voided, or any special terms imposed?",
+                },
               ].map((item) => (
                 <div key={item.key}>
-                  <p className="text-gray-900 font-semibold mb-3">{item.label}</p>
+                  <p className="text-gray-900 font-semibold mb-3">
+                    {item.label}
+                  </p>
                   <div className="grid grid-cols-2 gap-4">
                     <button
                       onClick={() => {
-                        if (item.key === "criminal") setCriminalConvictions(true);
+                        if (item.key === "criminal")
+                          setCriminalConvictions(true);
                         if (item.key === "medical") setMedicalConditions(true);
-                        if (item.key === "insurance") setInsuranceCancelled(true);
+                        if (item.key === "insurance")
+                          setInsuranceCancelled(true);
                       }}
                       className={`py-3 px-4 rounded-lg font-semibold transition-all duration-200 ${
-                        (item.key === "criminal" && criminalConvictions === true) ||
-                        (item.key === "medical" && medicalConditions === true) ||
-                        (item.key === "insurance" && insuranceCancelled === true)
+                        (item.key === "criminal" &&
+                          criminalConvictions === true) ||
+                        (item.key === "medical" &&
+                          medicalConditions === true) ||
+                        (item.key === "insurance" &&
+                          insuranceCancelled === true)
                           ? "bg-gradient-to-r from-gray-300 to-gray-400 text-white"
                           : "border border-gray-300 text-gray-700 hover:bg-gray-100"
                       }`}
@@ -539,14 +689,19 @@ export default function PersonalDetailsForm() {
                     </button>
                     <button
                       onClick={() => {
-                        if (item.key === "criminal") setCriminalConvictions(false);
+                        if (item.key === "criminal")
+                          setCriminalConvictions(false);
                         if (item.key === "medical") setMedicalConditions(false);
-                        if (item.key === "insurance") setInsuranceCancelled(false);
+                        if (item.key === "insurance")
+                          setInsuranceCancelled(false);
                       }}
                       className={`py-3 px-4 rounded-lg font-semibold transition-all duration-200 ${
-                        (item.key === "criminal" && criminalConvictions === false) ||
-                        (item.key === "medical" && medicalConditions === false) ||
-                        (item.key === "insurance" && insuranceCancelled === false)
+                        (item.key === "criminal" &&
+                          criminalConvictions === false) ||
+                        (item.key === "medical" &&
+                          medicalConditions === false) ||
+                        (item.key === "insurance" &&
+                          insuranceCancelled === false)
                           ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white"
                           : "border border-gray-300 text-gray-700 hover:bg-blue-50"
                       }`}
