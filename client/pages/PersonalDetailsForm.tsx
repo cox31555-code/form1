@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Calendar, Sun, Moon, User, MapPin, Briefcase, Car, Navigation, FileText, CheckSquare } from "lucide-react";
+import { Calendar, Sun, Moon } from "lucide-react";
 
 type CarParkingDay = "home" | "office" | "public" | "secure" | "street";
 type CarParkingNight = "drive" | "street" | "garage" | "locked" | "away" | "car_park" | "work" | "private";
