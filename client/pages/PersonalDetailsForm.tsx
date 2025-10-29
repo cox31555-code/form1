@@ -78,15 +78,10 @@ export default function PersonalDetailsForm() {
       <div className="max-w-[720px] mx-auto">
         <div className="bg-white rounded-xl p-8 border border-gray-100">
           {/* Header */}
-          <div className="flex items-center gap-4 mb-12">
-            <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
-              <span className="text-lg font-bold text-blue-600">📋</span>
-            </div>
-            <div>
-              <h1 className="text-4xl font-bold text-gray-900 tracking-tight">
-                Personal Details
-              </h1>
-            </div>
+          <div className="mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 tracking-tight">
+              Personal Details
+            </h1>
           </div>
 
           {/* Your Details Section */}
